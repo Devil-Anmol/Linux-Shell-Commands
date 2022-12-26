@@ -34,15 +34,13 @@ int main(int args,char **argv){
             }
         }
         else if(!strcmp(argv[1],"-p")){
-            char* strn;
-            strncpy(strn,argv[2],1);
             char* lists[1024];
             const char s[4] = " ";
-            lists[0]=strtok(strn[2], "\\");
+            lists[0]=strtok(argv[2], "/");
             int i=0;
             while (lists[i] != 0) {
                 i++;
-                lists[i]=strtok(0, "\\");
+                lists[i]=strtok(0, "/");
             }
             int o=0;
             while(lists[o]!=NULL){
