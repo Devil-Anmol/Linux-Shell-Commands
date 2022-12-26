@@ -33,6 +33,25 @@ int main(int args,char **argv){
             i++;
             }
         }
+        else if(!strcmp(argv[1],"-p")){
+            char* strn;
+            strncpy(strn,argv[2],1);
+            char* lists[1024];
+            const char s[4] = " ";
+            lists[0]=strtok(strn[2], "\\");
+            int i=0;
+            while (lists[i] != 0) {
+                i++;
+                lists[i]=strtok(0, "\\");
+            }
+            int o=0;
+            while(lists[o]!=NULL){
+                // printf("%s\n",lists[o]);
+                mkdir(lists[o],0777);
+                chdir(lists[o]);
+                o++;
+            }
+        }
         else if(strchr(argv[1],*("m")) && strchr(argv[1],*("-"))){
             int u = 0;
             char p[10];
