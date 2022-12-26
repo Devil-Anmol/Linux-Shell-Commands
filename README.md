@@ -63,6 +63,7 @@ mkdir
     mkdir dir           -make a new directory in the current directory
     mkdir -v dir        -make a new directory in the current directory also prints the statement
     mkdir -m=rwx dir    -make a new directory with special modes provided in the current directory
+    mkdir -p d1/d2/...  -make a new directory d1 in current directory and further d2 in d1 and so on recursively.
     
 #### Using Pthreads
 To call the commands by threads use "&t" in the end of the command.
